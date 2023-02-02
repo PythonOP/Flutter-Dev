@@ -1,5 +1,6 @@
 import 'package:catalog/pages/home_page.dart';
 import 'package:catalog/pages/login_page.dart';
+import 'package:catalog/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.light,
       theme: ThemeData(
         fontFamily: GoogleFonts.lato().fontFamily,
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.indigo,
         // primaryTextTheme: GoogleFonts.ramarajaTextTheme(),
       ),
       darkTheme: ThemeData(brightness: Brightness.dark),
@@ -23,8 +24,8 @@ class MyApp extends StatelessWidget {
       initialRoute: "/login",
       routes: {
         "/": (context) => const LoginPage(), // Slash means default route
-        "/home": (context) => const HomePage(),
-        "/login": (context) => const LoginPage(),
+        MyRoutes.homeRoute: (context) => const HomePage(),
+        MyRoutes.loginRoute: (context) => const LoginPage(),
       },
     );
   }
