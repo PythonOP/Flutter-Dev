@@ -1,6 +1,6 @@
 # catalog
 
-A new Flutter project.
+30 Days of Flutter 
 
 ## Getting Started
 
